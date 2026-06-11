@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopi Dodda | GenAI Engineer &amp; Tech Strategist</title>
+    <meta name="description" content="Portfolio of Gopi Dodda, GenAI Engineer. Transforming ideas into intelligent solutions. Dedicated to building AI-powered products at the intersection of Generative AI, data, and software engineering.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css?v=28">
+</head>
+<body>
+
+    <!-- Custom Liquid Cursor -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Floating Navigation Bar -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="nav-logo-btn">GD.</a>
+            <div class="nav-links">
+                <a href="#education" class="nav-item">Education</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#credentials" class="nav-item">Certifications</a>
+                <a href="#vibecoding" class="nav-item">Playground</a>
+                <a href="#hobbies" class="nav-item">Hobbies</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-wrapper">
+
+        <!-- Hero / Intro Section -->
+        <section id="hero" class="hero-section page-section">
+            <div class="container section-reveal hero-grid">
+                <!-- Avatar & Intro info -->
+                <div class="hero-intro-card glass">
+                    <div class="avatar-container tilt-card">
+                        <svg class="avatar-dashed-circle" viewBox="0 0 600 600">
+                            <circle cx="0" cy="-210" r="298" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="3" stroke-dasharray="12 12" />
+                        </svg>
+                        <svg class="avatar-dashed-circle-2" viewBox="0 0 600 600">
+                            <circle cx="330" cy="-200" r="590" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="3" stroke-dasharray="12 12" />
+                        </svg>
+                        <svg class="avatar-dashed-circle-3" viewBox="0 0 600 600">
+                            <circle cx="500" cy="160" r="140" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="3" stroke-dasharray="12 12" />
+                        </svg>
+                        <img src="assets/avatar.png?v=22" alt="Gopi Dodda Portrait" class="avatar-image">
+                    </div>
+                    <div class="intro-text">
+                        <h1 class="intro-title">Gopi&nbsp;&nbsp;Dodda</h1>
+                        
+                        <!-- Contact Pills -->
+                        <div class="contact-pills">
+                            <a href="mailto:gopidodda96@gmail.com" class="contact-pill glass-interactive">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>gopidodda96@gmail.com</span>
+                            </a>
+                            <a href="tel:+16562036365" class="contact-pill glass-interactive">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>+1 (656) 203-6365</span>
+                            </a>
+                        </div>
+
+                        <!-- Social Buttons -->
+                        <div class="social-links">
+                            <a href="https://github.com/gopidodda-usf" target="_blank" class="social-btn glass-interactive" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gopidodda96/" target="_blank" class="social-btn glass-interactive" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                            <a href="assets/resume.pdf" download="Gopi_Dodda_Resume.pdf" class="btn-primary glass-interactive download-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                <span>Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giant text & Pitch card -->
+                <div class="hero-main-card">
+                    <div class="big-title-container">
+                        <span class="accent-glow-text">GenAI</span>
+                        <span class="outline-text">ENGINEER</span>
+                    </div>
+                    <div class="hero-pitch-lead">Transforming ideas into intelligent solutions.</div>
+                    <p class="hero-pitch-text">
+                        <em>"Hey there, I'm <strong>Gopi</strong> - an AI engineer who loves building intelligent products that combine Generative AI, machine learning, data, and software engineering. Over the years, I've worked across product analytics, business intelligence, and full-stack development, helping transform data into insights and ideas into scalable solutions. I'm passionate about using technology to solve meaningful problems and create experiences that make a real difference.</em><br><br>
+                        <em>This website is a collection of my projects, experiences, and continuous learning journey. Thanks for stopping by, and I hope you enjoy exploring my work as much as I've enjoyed building it."</em>
+                    </p>
+                    
+                    <!-- Stats Grid -->
+                    <div class="stats-grid">
+                        <a href="#experience" class="stat-item glass-interactive tilt-card">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </a>
+                        <a href="#projects" class="stat-item glass-interactive tilt-card">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Projects Developed</span>
+                        </a>
+                        <a href="#credentials" class="stat-item glass-interactive tilt-card">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Certifications Earned</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee Tag Ticker -->
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <span>GENERATIVE AI</span>
+                <span class="marquee-bullet">•</span>
+                <span>LLM SYSTEMS</span>
+                <span class="marquee-bullet">•</span>
+                <span>RAG ARCHITECTURES</span>
+                <span class="marquee-bullet">•</span>
+                <span>UI/UX DESIGN</span>
+                <span class="marquee-bullet">•</span>
+                <span>AI AGENTS</span>
+                <span class="marquee-bullet">•</span>
+                <span>AUTOMATION</span>
+                <span class="marquee-bullet">•</span>
+                <span>MACHINE LEARNING</span>
+                <span class="marquee-bullet">•</span>
+                <span>DATA ENGINEERING</span>
+                <span class="marquee-bullet">•</span>
+                <span>PRODUCT MANAGEMENT</span>
+                <span class="marquee-bullet">•</span>
+                <span>VISUALIZATION & STORYTELLING</span>
+                <span class="marquee-bullet">•</span>
+                <span>BUSINESS INTELLIGENCE</span>
+                <span class="marquee-bullet">•</span>
+                <span>PREDICTIVE ANALYTICS</span>
+                <span class="marquee-bullet">•</span>
+                <span>FULL-STACK DEVELOPMENT</span>
+                <span class="marquee-bullet">•</span>
+                <span>CLOUD & MLOPS</span>
+                <span class="marquee-bullet">•</span>
+                <span></span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span>GENERATIVE AI</span>
+                <span class="marquee-bullet">•</span>
+                <span>LLM SYSTEMS</span>
+                <span class="marquee-bullet">•</span>
+                <span>RAG ARCHITECTURES</span>
+                <span class="marquee-bullet">•</span>
+                <span>UI/UX DESIGN</span>
+                <span class="marquee-bullet">•</span>
+                <span>AI AGENTS</span>
+                <span class="marquee-bullet">•</span>
+                <span>AUTOMATION</span>
+                <span class="marquee-bullet">•</span>
+                <span>MACHINE LEARNING</span>
+                <span class="marquee-bullet">•</span>
+                <span>DATA ENGINEERING</span>
+                <span class="marquee-bullet">•</span>
+                <span>PRODUCT MANAGEMENT</span>
+                <span class="marquee-bullet">•</span>
+                <span>VISUALIZATION & STORYTELLING</span>
+                <span class="marquee-bullet">•</span>
+                <span>BUSINESS INTELLIGENCE</span>
+                <span class="marquee-bullet">•</span>
+                <span>PREDICTIVE ANALYTICS</span>
+                <span class="marquee-bullet">•</span>
+                <span>FULL-STACK DEVELOPMENT</span>
+                <span class="marquee-bullet">•</span>
+                <span>CLOUD & MLOPS</span>
+                <span class="marquee-bullet">•</span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section page-section">
+            <div class="container section-reveal">
+                <span class="section-badge">Academic Background</span>
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-grid">
+                    <!-- Masters Degree Card -->
+                    <div class="education-card glass-interactive tilt-card">
+                        <div class="college-logo-container">
+                            <img src="assets/college1.png" alt="University of South Florida representation" class="college-logo">
+                        </div>
+                        <div class="education-content">
+                            <div class="edu-row edu-row-1">
+                                <h3 class="college-name">University of South Florida</h3>
+                                <span class="education-date">2024 - 2026</span>
+                            </div>
+                            <div class="edu-row edu-row-2">
+                                <div class="edu-degree-group">
+                                    <span class="degree-title">M.S. in Artificial Intelligence and Business Analytics</span>
+                                    <span class="separator">•</span>
+                                    <span class="education-gpa">GPA: 3.97 / 4.0</span>
+                                </div>
+                                <span class="education-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg> Tampa, FL
+                                </span>
+                            </div>
+                            <p class="education-desc">
+                                Specialized in machine learning pipelines, predictive modeling, and business intelligence strategy. Researched scalable GenAI agent orchestration frameworks.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bachelors Degree Card -->
+                    <div class="education-card glass-interactive tilt-card">
+                        <div class="college-logo-container">
+                            <img src="assets/college2.png" alt="National Institute of Technology Calicut representation" class="college-logo">
+                        </div>
+                        <div class="education-content">
+                            <div class="edu-row edu-row-1">
+                                <h3 class="college-name">National Institute of Technology Calicut</h3>
+                                <span class="education-date">2014 - 2019</span>
+                            </div>
+                            <div class="edu-row edu-row-2">
+                                <div class="edu-degree-group">
+                                    <span class="degree-title">B.Tech. in Civil Engineering</span>
+                                </div>
+                                <span class="education-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg> India
+                                </span>
+                            </div>
+                            <p class="education-desc">
+                                Developed strong mathematical, analytical, and computational modeling foundations. Self-taught computer science principles, transitioning into data systems and software.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="experience-section page-section">
+            <div class="container section-reveal">
+                <span class="section-badge">Career Timeline</span>
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-timeline">
+                    <!-- Exp Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-interactive tilt-card">
+                            <div class="timeline-header">
+                                <div class="timeline-employer">
+                                    <h3 class="job-role">Senior Analyst</h3>
+                                    <h4 class="company-name">FitFlix &bull; Bengaluru, India</h4>
+                                </div>
+                                <span class="timeline-date">May 2023 &ndash; May 2024</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Analyzed large customer, pricing, and revenue datasets to identify revenue leakage and pricing inefficiencies, contributing to 40% YoY revenue growth.</li>
+                                <li>Built and maintained ELT pipelines in Snowflake to clean and transform data, improving reporting efficiency by 25%.</li>
+                                <li>Developed dashboard reporting and KPI tracking for revenue, churn, and customer behavior, enabling faster decision-making for business stakeholders.</li>
+                                <li>Conducted ad hoc and recurring analysis to support pricing strategy, retention initiatives, and performance monitoring.</li>
+                                <li>Collaborated with business, operations, and engineering teams to translate data findings into process improvements.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-interactive tilt-card">
+                            <div class="timeline-header">
+                                <div class="timeline-employer">
+                                    <h3 class="job-role">Product Analyst</h3>
+                                    <h4 class="company-name">BlackBuck (Zinka Logistics Solutions Private Limited) &bull; Bengaluru, India</h4>
+                                </div>
+                                <span class="timeline-date">May 2022 &ndash; Apr 2023</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Analyzed user, pricing, and transaction data to identify opportunities for conversion and pricing optimization.</li>
+                                <li>Designed and evaluated A/B tests using hypothesis-driven analysis, improving conversion rates by 10%.</li>
+                                <li>Used data to support implementation of a three-tier pricing model, contributing $1.1 million in incremental revenue.</li>
+                                <li>Built analysis and reporting for cross-functional stakeholders across business, engineering, and product teams.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-interactive tilt-card">
+                            <div class="timeline-header">
+                                <div class="timeline-employer">
+                                    <h3 class="job-role">Product Analyst</h3>
+                                    <h4 class="company-name">MediBuddy (Phasorz Technologies Private Limited) &bull; Bengaluru, India</h4>
+                                </div>
+                                <span class="timeline-date">Nov 2021 &ndash; Apr 2022</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Built real-time dashboards in Apache Superset to monitor product KPIs and user engagement.</li>
+                                <li>Cleaned, standardized, and validated 150K+ SKUs, improving data quality and increasing analytics reliability by 30%.</li>
+                                <li>Performed trend and funnel analysis on user journeys to identify pain points and improve customer experience.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-interactive tilt-card">
+                            <div class="timeline-header">
+                                <div class="timeline-employer">
+                                    <h3 class="job-role">Senior Engineer</h3>
+                                    <h4 class="company-name">Larsen &amp; Toubro Limited &bull; Chennai, India</h4>
+                                </div>
+                                <span class="timeline-date">Jul 2019 &ndash; Nov 2020</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Extracted and analyzed operational and inventory data from SAP ERP systems to support project planning and reporting.</li>
+                                <li>Built Tableau dashboards to monitor real-time stock availability for 1,000+ inventory items, reducing shortages and improving visibility.</li>
+                                <li>Automated recurring operational reports using Excel functions, Pivot Tables, and LOOKUP formulas, reducing manual effort by 30%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Carousel Section -->
+        <section id="projects" class="projects-section page-section">
+            <div class="container section-reveal">
+                <span class="section-badge">Selected Work</span>
+                <div class="projects-header">
+                    <h2 class="section-title">Projects</h2>
+                </div>
+                
+                <div class="projects-carousel-wrapper">
+                    <button type="button" class="carousel-arrow prev-arrow" aria-label="Previous Project">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    
+                    <div class="projects-carousel-container">
+                    <div class="projects-carousel-track">
+                        <!-- Project 1 Card -->
+                        <div class="project-card glass-interactive tilt-card" data-drawer="drawer-project1">
+                            <div class="project-thumbnail-wrapper">
+                                <img src="assets/florida_poverty.jpg" alt="Florida Poverty Trends Mockup" class="project-thumbnail">
+                                <div class="project-hover-overlay tilt-card">
+                                    <span class="overlay-btn">Explore Project &rarr;</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="project-tag">Data Analysis</span>
+                                    <span class="project-tag">Tableau</span>
+                                </div>
+                                <h3 class="project-card-title">Florida Poverty Trends</h3>
+                                <p class="project-card-excerpt">Data-driven study of poverty trends and economic resilience across major Florida counties.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 Card -->
+                        <div class="project-card glass-interactive tilt-card" data-drawer="drawer-project2">
+                            <div class="project-thumbnail-wrapper">
+                                <img src="assets/goguess.jpg" alt="GoGuess Mockup" class="project-thumbnail">
+                                <div class="project-hover-overlay tilt-card">
+                                    <span class="overlay-btn">Explore Project &rarr;</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="project-tag">Web Development</span>
+                                    <span class="project-tag">EdTech</span>
+                                </div>
+                                <h3 class="project-card-title">GoGuess</h3>
+                                <p class="project-card-excerpt">Voice-enabled geography game that transforms map learning into an interactive challenge.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 Card -->
+                        <div class="project-card glass-interactive tilt-card" data-drawer="drawer-project3">
+                            <div class="project-thumbnail-wrapper">
+                                <img src="assets/email_automation.jpg" alt="AI Email Automation Mockup" class="project-thumbnail">
+                                <div class="project-hover-overlay tilt-card">
+                                    <span class="overlay-btn">Explore Project &rarr;</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="project-tag">Agentic AI</span>
+                                    <span class="project-tag">RAG</span>
+                                </div>
+                                <h3 class="project-card-title">Email Automation System</h3>
+                                <p class="project-card-excerpt">Agentic email workflow that classifies, drafts, and dispatches responses autonomously.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 Card -->
+                        <div class="project-card glass-interactive tilt-card" data-drawer="drawer-project4">
+                            <div class="project-thumbnail-wrapper">
+                                <img src="assets/caresync_ai.jpg" alt="CareSync AI Mockup" class="project-thumbnail">
+                                <div class="project-hover-overlay tilt-card">
+                                    <span class="overlay-btn">Explore Project &rarr;</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="project-tag">Healthcare Tech</span>
+                                    <span class="project-tag">Full-Stack</span>
+                                </div>
+                                <h3 class="project-card-title">CareSync AI</h3>
+                                <p class="project-card-excerpt">AI-powered healthcare platform for intelligent scheduling, clinical assistance, and operational insights.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 Card -->
+                        <div class="project-card glass-interactive tilt-card" data-drawer="drawer-project5">
+                            <div class="project-thumbnail-wrapper">
+                                <img src="assets/telecom_churn.jpg" alt="Telecom Churn Prediction Mockup" class="project-thumbnail">
+                                <div class="project-hover-overlay tilt-card">
+                                    <span class="overlay-btn">Explore Project &rarr;</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="project-tag">Machine Learning</span>
+                                    <span class="project-tag">Streamlit</span>
+                                </div>
+                                <h3 class="project-card-title">Telecom Churn Prediction</h3>
+                                <p class="project-card-excerpt">Predictive analytics solution that identifies churn risk and enables proactive retention.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 Card -->
+                        <div class="project-card glass-interactive tilt-card" data-drawer="drawer-project6">
+                            <div class="project-thumbnail-wrapper">
+                                <img src="assets/crime_determinants.jpg" alt="Socio Economic Determinants of Crime Mockup" class="project-thumbnail">
+                                <div class="project-hover-overlay tilt-card">
+                                    <span class="overlay-btn">Explore Project &rarr;</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="project-tag">Business Intelligence</span>
+                                    <span class="project-tag">Tableau</span>
+                                </div>
+                                <h3 class="project-card-title">Socio-Economic Determinants of Crime</h3>
+                                <p class="project-card-excerpt">Interactive analytics dashboard exploring how income and inequality influence crime trends.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project 7 Card -->
+                        <div class="project-card glass-interactive tilt-card" data-drawer="drawer-project7">
+                            <div class="project-thumbnail-wrapper">
+                                <img src="assets/ev_adoption.jpg" alt="EV Adoption in Washington State Mockup" class="project-thumbnail">
+                                <div class="project-hover-overlay tilt-card">
+                                    <span class="overlay-btn">Explore Project &rarr;</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="project-tag">Data Modeling</span>
+                                    <span class="project-tag">STAR Schema</span>
+                                </div>
+                                <h3 class="project-card-title">EV Adoption in Washington State</h3>
+                                <p class="project-card-excerpt">Data warehouse uncovering economic and geographic drivers of EV adoption across Washington State.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="carousel-arrow next-arrow" aria-label="Next Project">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Awards Section -->
+        <section id="credentials" class="credentials-section page-section">
+            <div class="container section-reveal">
+                <span class="section-badge">Recognitions</span>
+                <h2 class="section-title">Certifications &amp; Awards</h2>
+                
+                <div class="credentials-grid">
+                    <!-- Certifications Block -->
+                    <div class="credentials-col glass">
+                        <h3 class="credential-col-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Certifications
+                        </h3>
+                        <div class="certs-grid">
+                            <!-- Cert Item 1 -->
+                            <a href="https://credentials.databricks.com/764c0271-46ad-45e0-87d6-8c75d1e998ac#acc.WDPGLgTA" target="_blank" class="cert-card glass-interactive cert-databricks tilt-card">
+                                <div class="cert-logo-container">
+                                    <img src="assets/db_professional.png" alt="Databricks Certified Data Engineer Professional Badge" class="cert-badge-img">
+                                </div>
+                                <div class="cert-card-body">
+                                    <h4 class="cert-card-title">Databricks Certified Data Engineer Professional</h4>
+                                    <span class="cert-card-issuer">Databricks</span>
+                                </div>
+                                </a>
+
+                            <!-- Cert Item 2 -->
+                            <a href="https://credentials.databricks.com/1bcbd40b-4440-4cb3-a7e6-f256905b9c4f#acc.Oauhr9Ws" target="_blank" class="cert-card glass-interactive cert-databricks tilt-card">
+                                <div class="cert-logo-container">
+                                    <img src="assets/db_associate.png" alt="Databricks Certified Data Engineer Associate Badge" class="cert-badge-img">
+                                </div>
+                                <div class="cert-card-body">
+                                    <h4 class="cert-card-title">Databricks Certified Data Engineer Associate</h4>
+                                    <span class="cert-card-issuer">Databricks</span>
+                                </div>
+                            </a>
+
+                            <!-- Cert Item 3 -->
+                            <a href="https://credentials.databricks.com/16fce334-22b5-46b4-be78-2593b17e8cc6#acc.AqvUzPgH" target="_blank" class="cert-card glass-interactive cert-databricks tilt-card">
+                                <div class="cert-logo-container">
+                                    <img src="assets/db_architect.png" alt="Azure Databricks Platform Architect Accreditation Badge" class="cert-badge-img">
+                                </div>
+                                <div class="cert-card-body">
+                                    <h4 class="cert-card-title">Azure Databricks Platform Architect</h4>
+                                    <span class="cert-card-issuer">Databricks</span>
+                                </div>
+                            </a>
+
+                            <!-- Cert Item 4 -->
+                            <a href="https://achieve.snowflake.com/60f14832-30e2-4374-9bb7-c4b8e3e42fb6#acc.IXU9CdfG" target="_blank" class="cert-card glass-interactive cert-snowflake tilt-card">
+                                <div class="cert-logo-container">
+                                    <img src="assets/snowflake_snowpro.png" alt="SnowPro Associate: Platform Certification Badge" class="cert-badge-img">
+                                </div>
+                                <div class="cert-card-body">
+                                    <h4 class="cert-card-title">SnowPro Associate: Platform Certification</h4>
+                                    <span class="cert-card-issuer">Snowflake</span>
+                                </div>
+                            </a>
+
+                            <!-- Cert Item 5 -->
+                            <a href="https://coursera.org/verify/professional-cert/UEL7V5CE627R" target="_blank" class="cert-card glass-interactive cert-google tilt-card">
+                                <div class="cert-logo-container">
+                                    <img src="assets/google_advanced_analytics.png" alt="Google Advanced Data Analytics Certificate Badge" class="cert-badge-img">
+                                </div>
+                                <div class="cert-card-body">
+                                    <h4 class="cert-card-title">Google Advanced Data Analytics Certificate</h4>
+                                    <span class="cert-card-issuer">Google &bull; Coursera</span>
+                                </div>
+                            </a>
+
+                            <!-- Cert Item 6 -->
+                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/EYAE3CQ282T8" target="_blank" class="cert-card glass-interactive cert-google tilt-card">
+                                <div class="cert-logo-container">
+                                    <img src="assets/google_data_analytics.png" alt="Google Data Analytics Certificate Badge" class="cert-badge-img">
+                                </div>
+                                <div class="cert-card-body">
+                                    <h4 class="cert-card-title">Google Data Analytics Professional Certificate</h4>
+                                    <span class="cert-card-issuer">Google &bull; Coursera</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Awards Block -->
+                    <div class="credentials-col glass">
+                        <h3 class="credential-col-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            Awards &amp; Honors
+                        </h3>
+                        <ul class="credentials-list">
+                            <li class="credential-item tilt-card glass-interactive">
+                                <div class="cred-info">
+                                    <span class="cred-title">Summa Cum Laude Honors</span>
+                                    <span class="cred-org">GPA: 3.97/4.00 - University of South Florida</span>
+                                </div>
+                                <span class="cred-year">May 2026</span>
+                            </li>
+                            <li class="credential-item tilt-card glass-interactive">
+                                <div class="cred-info">
+                                    <span class="cred-title">FitFlix Star Performer</span>
+                                    <span class="cred-org">Best Employee of the Year 2023 - FitFlix</span>
+                                </div>
+                                <span class="cred-year">Jan 2024</span>
+                            </li>
+                            <li class="credential-item tilt-card glass-interactive">
+                                <div class="cred-info">
+                                    <span class="cred-title">BlackBuck High Spirit Mile Award</span>
+                                    <span class="cred-org">Team of the Year 2022 - BlackBuck</span>
+                                </div>
+                                <span class="cred-year">Dec 2022</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vibecoding Spaces Section -->
+        <section id="vibecoding" class="vibecoding-section page-section">
+            <div class="container section-reveal">
+                <span class="section-badge">Fun Interactive Experiments</span>
+                <h2 class="section-title">Vibecoding Spaces</h2>
+                <p class="section-subtitle">Playable JavaScript canvas mini-experiments that showcase high-performance interaction design.</p>
+                
+                <div class="playground-grid">
+                    <!-- Widget 1: Particle Gravity Field -->
+                    <div class="playground-card glass">
+                        <div class="playground-header">
+                            <div class="play-title-group">
+                                <span class="play-icon">✨</span>
+                                <h3 class="play-card-title">Particle Gravity Mesh</h3>
+                            </div>
+                            <span class="play-badge">Canvas 2D</span>
+                        </div>
+                        <div class="canvas-viewport" id="particle-viewport">
+                            <canvas id="particle-canvas"></canvas>
+                            <div class="canvas-instruction">Move cursor inside to attract particles</div>
+                        </div>
+                        <div class="play-controls">
+                            <button class="btn-sec glass-interactive" id="btn-reset-particles">Reset Mesh</button>
+                            <div class="speed-slider-group">
+                                <label for="particle-count-slider">Count:</label>
+                                <input type="range" id="particle-count-slider" min="50" max="300" value="150" class="glass-interactive">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 2: Retro Hacking Reaction Game -->
+                    <div class="playground-card glass">
+                        <div class="playground-header">
+                            <div class="play-title-group">
+                                <span class="play-icon">⚡</span>
+                                <h3 class="play-card-title">Cyber Code Breaker</h3>
+                            </div>
+                            <span class="play-badge">Reaction Game</span>
+                        </div>
+                        <div class="game-viewport" id="game-viewport">
+                            <div class="game-intro" id="game-intro-screen">
+                                <span class="cyber-shield-icon">⚿</span>
+                                <p>Click the matching blinking keys before time runs out to bypass the security wall.</p>
+                                <button class="btn-primary glass-interactive" id="btn-start-game">INITIALIZE BYPASS</button>
+                            </div>
+                            
+                            <div class="game-play hidden" id="game-play-screen">
+                                <div class="game-hud">
+                                    <div class="hud-item">SYS VOLTS: <span id="game-score" class="accent-text">0</span></div>
+                                    <div class="hud-item">WALL DEPTH: <span id="game-timer" class="orange-text">10.0s</span></div>
+                                </div>
+                                <div class="cyber-display" id="cyber-display-target">
+                                    TARGET SEQUENCE: <span id="target-char" class="glowing-code">---</span>
+                                </div>
+                                <div class="cyber-keyboard" id="cyber-keyboard-grid">
+                                    <!-- Keyboard buttons dynamically loaded -->
+                                </div>
+                            </div>
+                            
+                            <div class="game-over hidden" id="game-over-screen">
+                                <h4 class="game-result-title" id="game-result-title">SYSTEM COMPROMISED</h4>
+                                <p>Successfully bypassed <span id="final-score" class="accent-text">0</span> encryption nodes.</p>
+                                <button class="btn-primary glass-interactive" id="btn-restart-game">RE-ESTABLISH PIPELINE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies & Interests Section -->
+        <section id="hobbies" class="hobbies-section page-section">
+            <div class="container section-reveal">
+                <span class="section-badge">Life Beyond Code</span>
+                <h2 class="section-title">Hobbies &amp; Interests</h2>
+                
+                <div class="hobbies-grid">
+                    <!-- Hobby 1 (Sports - Red) -->
+                    <div class="hobby-card glass-interactive tilt-card hobby-sports" data-drawer="drawer-hobby1">
+                        <div class="hobby-icon-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <h3 class="hobby-title">Sports</h3>
+                    </div>
+
+                    <!-- Hobby 2 (Photography - Orange) -->
+                    <div class="hobby-card glass-interactive tilt-card hobby-photography" data-drawer="drawer-hobby2">
+                        <div class="hobby-icon-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                        </div>
+                        <h3 class="hobby-title">Photography</h3>
+                    </div>
+
+                    <!-- Hobby 3 (Music - Pink) -->
+                    <div class="hobby-card glass-interactive tilt-card hobby-music" data-drawer="drawer-hobby3">
+                        <div class="hobby-icon-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                        </div>
+                        <h3 class="hobby-title">Music</h3>
+                    </div>
+
+                    <!-- Hobby 4 (Cooking - Yellow) -->
+                    <div class="hobby-card glass-interactive tilt-card hobby-cooking" data-drawer="drawer-hobby4">
+                        <div class="hobby-icon-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                        </div>
+                        <h3 class="hobby-title">Cooking</h3>
+                    </div>
+
+                    <!-- Hobby 5 (Travel - Blue) -->
+                    <div class="hobby-card glass-interactive tilt-card hobby-travel" data-drawer="drawer-hobby5">
+                        <div class="hobby-icon-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                        </div>
+                        <h3 class="hobby-title">Travel</h3>
+                    </div>
+
+                    <!-- Hobby 6 (Fitness - Purple) -->
+                    <div class="hobby-card glass-interactive tilt-card hobby-fitness" data-drawer="drawer-hobby6">
+                        <div class="hobby-icon-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        </div>
+                        <h3 class="hobby-title">Fitness</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section page-section">
+            <div class="container section-reveal">
+                <div class="contact-header">
+                    <span class="section-badge">Get In Touch</span>
+                    <h2 class="section-title">
+                        Let's Start<br>A Conversation
+                    </h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info-block">
+                        <p class="contact-pitch">
+                            <em>"Whether you are a recruiter looking for the next great hire, an innovator ready to launch a new project, or just an AI enthusiast wanting to chat about Generative AI, LLMs, and code, I would love to connect.</em><br><br>
+                            <em>And hey, if you liked the website, show it some love by dropping a message. Whether it's feedback, a collaboration idea, or just a quick hello, I'd be happy to hear from you."</em>
+                        </p>
+                        <div class="direct-contact-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Mobile:</span>
+                                <a href="tel:+16562036365" class="detail-value glass-interactive">+1 (656) 203-6365</a>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Email:</span>
+                                <a href="mailto:gopidodda96@gmail.com" class="detail-value glass-interactive">gopidodda96@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-block glass">
+                        <form id="portfolio-contact-form" autocomplete="off">
+                            <!-- Web3Forms Access Key (Get yours at https://web3forms.com/) -->
+                            <input type="hidden" name="access_key" value="a21e29fb-abb0-40cf-969d-255ee1218d12">
+                            
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" name="name" required placeholder="John Doe" class="glass-interactive">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" name="email" required placeholder="john@example.com" class="glass-interactive">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" name="message" required placeholder="Your message..." rows="4" class="glass-interactive"></textarea>
+                            </div>
+                            <div class="send-mail-button">
+                                <button type="submit" class="btn-primary glass-interactive submit-form-btn">
+                                    <span id="btn-text">Send Mail</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2L15 22L11 13L2 9L22 2Z"></path></svg>
+                                    <span id="btn-spinner" class="spinner hidden"></span>
+                                    <span id="btn-success" class="checkmark-icon hidden">✓</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <span class="copyright">© 2026 Gopi Dodda. All Rights Reserved.</span>
+            <a href="#hero" class="back-to-top glass-interactive" id="back-to-top-btn" aria-label="Back to Top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- CASE STUDY DRAWERS -->
+    
+    <!-- Project 1 Case Study Drawer -->
+    <div class="drawer-overlay" id="drawer-project1">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <span class="drawer-project-tag">Data Analysis</span>
+                    <h2 class="drawer-project-title">Florida Poverty Trends</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-project1" aria-label="Close Case Study">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/florida_poverty.jpg" alt="Florida Poverty Trends Full Mockup" class="drawer-hero-img">
+                <div class="drawer-content-grid">
+                    <div class="drawer-main-content">
+                        <h3>Overview</h3>
+                        <p>Florida Poverty Trends is a data analytics project that examines how poverty rates have evolved across Florida counties from 2012-2024, with a particular focus on Hillsborough County (Tampa) and its economic resilience over time.</p>
+                        
+                        <h3>The Challenge</h3>
+                        <p>Understanding regional poverty trends requires analyzing long-term data and comparing counties with diverse economic conditions, demographics, and recovery patterns.</p>
+                        
+                        <h3>The Solution</h3>
+                        <p>Using data from the U.S. Census Bureau, I developed a multi-year analytical dataset and interactive Tableau dashboards to evaluate poverty trends across Florida counties. The analysis revealed that Hillsborough County's poverty rate declined from <strong>17.2% to 13.2%</strong>, demonstrating steady improvement and resilience through the COVID-19 period.</p>
+                    </div>
+                    <div class="drawer-sidebar">
+                        <div class="sidebar-block">
+                            <h4>Domain</h4>
+                            <p>Data Analytics</p>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4>Role</h4>
+                            <p>Data Analyst</p>
+                        </div>
+                        <div class="sidebar-block tech-stack-block">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Pandas</span>
+                                <span class="tech-pill">Excel</span>
+                                <span class="tech-pill">Tableau</span>
+                                <span class="tech-pill">US Census API</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-block project-links-block">
+                            <h4>Links</h4>
+                            <div class="project-links">
+                                <a href="https://bit.ly/SOTRProjectGD-Tableau" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Tableau
+                                </a>
+                                <a href="https://bit.ly/SOTRProjectGD-GitHub" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Case Study Drawer -->
+    <div class="drawer-overlay" id="drawer-project2">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <span class="drawer-project-tag">Web Development</span>
+                    <h2 class="drawer-project-title">GoGuess</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-project2" aria-label="Close Case Study">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/goguess.jpg" alt="GoGuess Full Mockup" class="drawer-hero-img">
+                <div class="drawer-content-grid">
+                    <div class="drawer-main-content">
+                        <h3>Overview</h3>
+                        <p>GoGuess is an interactive geography game that transforms map learning into a fun, challenge-driven experience. Players test their geographic knowledge by identifying locations across interactive maps while tracking their progress and performance.</p>
+                        
+                        <h3>Challenge</h3>
+                        <p>Traditional geography learning often relies on memorization, making it difficult to stay engaged and retain knowledge over time.</p>
+                        
+                        <h3>Solution</h3>
+                        <p>I developed a browser-based geography game that helps users strengthen map recognition skills through interactive challenges. Players can answer using either keyboard input or voice commands, while real-time feedback and scoring mechanics create an engaging and accessible learning experience.</p>
+                    </div>
+                    <div class="drawer-sidebar">
+                        <div class="sidebar-block">
+                            <h4>Domain</h4>
+                            <p>EdTech</p>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4>Role</h4>
+                            <p>Frontend Developer</p>
+                        </div>
+                        <div class="sidebar-block tech-stack-block">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-pills">
+                                <span class="tech-pill">HTML</span>
+                                <span class="tech-pill">CSS</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">Web Speech API</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-block project-links-block">
+                            <h4>Links</h4>
+                            <div class="project-links">
+                                <a href="https://gopidodda-usf.github.io/GoGuess/" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Case Study Drawer -->
+    <div class="drawer-overlay" id="drawer-project3">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <span class="drawer-project-tag">Agentic AI</span>
+                    <h2 class="drawer-project-title">Email Automation System</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-project3" aria-label="Close Case Study">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/email_automation.jpg" alt="AI Email Automation Full Mockup" class="drawer-hero-img">
+                <div class="drawer-content-grid">
+                    <div class="drawer-main-content">
+                        <h3>Overview</h3>
+                        <p>Email Automation System is an AI-powered communication platform that automates email classification, response generation, and dispatch using Large Language Models and Retrieval-Augmented Generation (RAG).</p>
+                        
+                        <h3>Challenge</h3>
+                        <p>Organizations receive large volumes of repetitive emails, making manual triaging, response generation, and knowledge management inefficient and difficult to scale.</p>
+                        
+                        <h3>Solution</h3>
+                        <p>I developed an end-to-end email automation pipeline that classifies incoming emails, retrieves relevant institutional knowledge using RAG, generates context-aware responses with Gemini AI, evaluates response quality, and automatically dispatches approved replies through Gmail API.</p>
+                    </div>
+                    <div class="drawer-sidebar">
+                        <div class="sidebar-block">
+                            <h4>Domain</h4>
+                            <p>Generative AI</p>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4>Role</h4>
+                            <p>GenAI Engineer</p>
+                        </div>
+                        <div class="sidebar-block tech-stack-block">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">LangChain</span>
+                                <span class="tech-pill">Gemini API</span>
+                                <span class="tech-pill">ChromaDB</span>
+                                <span class="tech-pill">Gmail API</span>
+                                <span class="tech-pill">RAG</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-block project-links-block">
+                            <h4>Links</h4>
+                            <div class="project-links">
+                                <a href="https://bit.ly/EmailAutomationAI-GitHub" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 4 Case Study Drawer -->
+    <div class="drawer-overlay" id="drawer-project4">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <span class="drawer-project-tag">Healthcare Tech</span>
+                    <h2 class="drawer-project-title">CareSync AI</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-project4" aria-label="Close Case Study">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/caresync_ai.jpg" alt="CareSync AI Full Mockup" class="drawer-hero-img">
+                <div class="drawer-content-grid">
+                    <div class="drawer-main-content">
+                        <h3>Overview</h3>
+                        <p>CareSync AI is an <strong>AI-powered healthcare platform</strong> that streamlines appointment scheduling, patient engagement, and clinical operations through Generative AI, machine learning, and analytics.</p>
+                        
+                        <h3>Challenge</h3>
+                        <p>Healthcare providers face challenges such as appointment no-shows, scheduling inefficiencies, and administrative overhead that impact operational efficiency and patient care.</p>
+                        
+                        <h3>Solution</h3>
+                        <p>CareSync AI combines intelligent scheduling, Gemini AI-powered symptom triaging, and predictive analytics into a unified platform. A <strong>Random Forest</strong> model predicts appointment no-show risk with <strong>87% accuracy</strong>, helping clinics optimize schedules and improve resource utilization.</p>
+                    </div>
+                    <div class="drawer-sidebar">
+                        <div class="sidebar-block">
+                            <h4>Domain</h4>
+                            <p>Healthcare</p>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4>Role</h4>
+                            <p>Full-Stack AI Architect</p>
+                        </div>
+                        <div class="sidebar-block tech-stack-block">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-pills">
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">Tailwind CSS</span>
+                                <span class="tech-pill">Recharts</span>
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">PostgreSQL</span>
+                                <span class="tech-pill">Gemini AI</span>
+                                <span class="tech-pill">Scikit-Learn</span>
+                                <span class="tech-pill">Pytest</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-block project-links-block">
+                            <h4>Links</h4>
+                            <div class="project-links">
+                                <a href="https://github.com/gopidodda-usf/caresync-ai" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                                <a href="https://caresync.gopidodda.com" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 5 Case Study Drawer -->
+    <div class="drawer-overlay" id="drawer-project5">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <span class="drawer-project-tag">Machine Learning</span>
+                    <h2 class="drawer-project-title">Telecom Churn Prediction</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-project5" aria-label="Close Case Study">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/telecom_churn.jpg" alt="Telecom Churn Prediction Full Mockup" class="drawer-hero-img">
+                <div class="drawer-content-grid">
+                    <div class="drawer-main-content">
+                        <h3>Overview</h3>
+                        <p>Telecom Customer Churn Prediction is a client-focused analytics solution designed to help telecom providers identify customers at risk of leaving and support proactive retention strategies through predictive analytics.</p>
+                        
+                        <h3>Challenge</h3>
+                        <p>Customer churn directly impacts revenue and customer lifetime value, making early identification of at-risk customers critical for business growth and retention.</p>
+                        
+                        <h3>Solution</h3>
+                        <p>Using customer behavioral and service data, I developed a <strong>Random Forest</strong> model that achieved <strong>95% prediction accuracy</strong> in identifying churn risk. A <strong>Streamlit application</strong> enables business teams to generate real-time predictions, understand key churn drivers, and make informed retention decisions.</p>
+                    </div>
+                    <div class="drawer-sidebar">
+                        <div class="sidebar-block">
+                            <h4>Domain</h4>
+                            <p>Customer Analytics</p>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4>Role</h4>
+                            <p>ML Engineer</p>
+                        </div>
+                        <div class="sidebar-block tech-stack-block">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Scikit-Learn</span>
+                                <span class="tech-pill">Streamlit</span>
+                                <span class="tech-pill">Pandas</span>
+                                <span class="tech-pill">Jupyter Notebook</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-block project-links-block">
+                            <h4>Links</h4>
+                            <div class="project-links">
+                                <a href="https://bit.ly/EISCapstoneGD-Streamlit" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Website
+                                </a>
+                                <a href="https://bit.ly/EISCapstoneGD-GitHub" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 6 Case Study Drawer -->
+    <div class="drawer-overlay" id="drawer-project6">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <span class="drawer-project-tag">Business Intelligence</span>
+                    <h2 class="drawer-project-title">Socio-Economic Determinants of Crime</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-project6" aria-label="Close Case Study">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/crime_determinants.jpg" alt="Socio Economic Determinants of Crime Full Mockup" class="drawer-hero-img">
+                <div class="drawer-content-grid">
+                    <div class="drawer-main-content">
+                        <h3>Overview</h3>
+                        <p>Socio-Economic Determinants of Crime is a data analytics project that explores how income, poverty, unemployment, and income inequality influence crime rates across U.S. states from 2010-2023.</p>
+                        
+                        <h3>Challenge</h3>
+                        <p>Crime is influenced by multiple socio-economic factors, making it difficult to identify which variables have the strongest impact and how changes in economic conditions affect public safety over time.</p>
+                        
+                        <h3>Solution</h3>
+                        <p>Using data from the <strong>FBI Crime Data API</strong> and <strong>U.S. Census Bureau</strong>, I built an analytics pipeline to collect, clean, and analyze state-level crime and economic data. Interactive Tableau dashboards revealed a <strong>$69,000</strong> household income threshold beyond which crime rates stabilize, while highlighting the relationship between income inequality and violent crime.</p>
+                    </div>
+                    <div class="drawer-sidebar">
+                        <div class="sidebar-block">
+                            <h4>Domain</h4>
+                            <p>Business Intelligence</p>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4>Role</h4>
+                            <p>BI Developer</p>
+                        </div>
+                        <div class="sidebar-block tech-stack-block">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Tableau</span>
+                                <span class="tech-pill">Jupyter Notebook</span>
+                                <span class="tech-pill">Excel</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-block project-links-block">
+                            <h4>Links</h4>
+                            <div class="project-links">
+                                <a href="https://bit.ly/DVFinalProjectGD-Tableau" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Tableau Public
+                                </a>
+                                <a href="https://bit.ly/DVFinalProjectGD-GitHub" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 7 Case Study Drawer -->
+    <div class="drawer-overlay" id="drawer-project7">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <span class="drawer-project-tag">Data Modeling</span>
+                    <h2 class="drawer-project-title">EV Adoption in Washington State</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-project7" aria-label="Close Case Study">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/ev_adoption.jpg" alt="EV Adoption in Washington State Full Mockup" class="drawer-hero-img">
+                <div class="drawer-content-grid">
+                    <div class="drawer-main-content">
+                        <h3>Overview</h3>
+                        <p>EV Adoption in Washington State is a data warehousing project that integrates EV registration, income, and policy datasets into a centralized analytical platform for studying electric vehicle adoption trends.</p>
+                        
+                        <h3>Challenge</h3>
+                        <p>EV adoption data is often fragmented across multiple sources, making it difficult to analyze the combined impact of economic, geographic, and policy factors.</p>
+                        
+                        <h3>Solution</h3>
+                        <p>I designed a STAR schema data warehouse and ETL pipeline to unify EV, income, and tax-exemption data from 2010-2024. SQL-based analysis revealed a <strong>strong correlation (0.68)</strong> between household income and EV adoption, while highlighting regional and manufacturer-specific adoption patterns.</p>
+                    </div>
+                    <div class="drawer-sidebar">
+                        <div class="sidebar-block">
+                            <h4>Domain</h4>
+                            <p>Data Warehousing</p>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4>Role</h4>
+                            <p>Data Engineer</p>
+                        </div>
+                        <div class="sidebar-block tech-stack-block">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-pills">
+                                <span class="tech-pill">SQL</span>
+                                <span class="tech-pill">Dimensional Modeling</span>
+                                <span class="tech-pill">Excel</span>
+                                <span class="tech-pill">Oracle SQL Developer</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-block project-links-block">
+                            <h4>Links</h4>
+                            <div class="project-links">
+                                <a href="https://bit.ly/DWFinalProjectGD-GitHub" target="_blank" class="project-link glass-interactive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobby 1 Detail Drawer (Sports) -->
+    <div class="drawer-overlay" id="drawer-hobby1">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <h2 class="drawer-project-title">Sports</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-hobby1" aria-label="Close Detail">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/hobby_sports.png" alt="Sports" class="drawer-hero-img">
+                <div class="drawer-main-content">
+                    <p>Sports and bouldering form a major part of my lifestyle, offering a healthy physical outlet that directly complements my software engineering. Bouldering is a climbing style performed on small rock formations or artificial walls without ropes, focusing on short, highly technical paths called "problems." Solving climbing routes requires strategic planning, spatial awareness, and problem-solving, turning every route into a three-dimensional physical chess puzzle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobby 2 Detail Drawer (Photography) -->
+    <div class="drawer-overlay" id="drawer-hobby2">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <h2 class="drawer-project-title">Photography</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-hobby2" aria-label="Close Detail">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/hobby_photography.png" alt="Photography" class="drawer-hero-img">
+                <div class="drawer-main-content">
+                    <p>Astrophotography is the specialized art of photographing night skies, celestial bodies, and deep-space nebulae. Capturing the Milky Way or distant celestial structures requires long exposures, camera tracking mount calibration, and specialized photo processing pipelines. It merges high-precision hardware calibration with absolute creative patience. Standing in complete silence under a clear, unpolluted night sky waiting for long-exposure sensors to collect photons is incredibly grounding.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobby 3 Detail Drawer (Music) -->
+    <div class="drawer-overlay" id="drawer-hobby3">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <h2 class="drawer-project-title">Music</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-hobby3" aria-label="Close Detail">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/hobby_music.png" alt="Music" class="drawer-hero-img">
+                <div class="drawer-main-content">
+                    <p>Creating modular ambient music involves routing control voltage (CV) and audio signals through eurorack synthesizer modules to generate evolving textures, melodies, and soundscapes. By patching oscillators, filters, and delay modules together, the synth becomes a living, breathing sound instrument. It is essentially visual coding but with sound electricity. There are no presets in eurorack modular; every organic note, tone, and rhythmic pattern must be patched from scratch using physical cables, producing entirely unique audio experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobby 4 Detail Drawer (Cooking) -->
+    <div class="drawer-overlay" id="drawer-hobby4">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <h2 class="drawer-project-title">Cooking</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-hobby4" aria-label="Close Detail">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/hobby_cooking.png" alt="Cooking" class="drawer-hero-img">
+                <div class="drawer-main-content">
+                    <p>Culinary arts and modernist cooking focus on precision temperature controls, sous-vide water circulation, artisanal sourdough fermentation, and flavor profiling. Preparing dishes involves balancing acid, heat, fat, and textures to elevate simple ingredients. Cooking is a creative sensory chemistry experiment. Following a recipe is like compiling code, but tweaking ingredients on the fly is where the true artistic improvisation and delicious outcomes happen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobby 5 Detail Drawer (Travel) -->
+    <div class="drawer-overlay" id="drawer-hobby5">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <h2 class="drawer-project-title">Travel</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-hobby5" aria-label="Close Detail">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/hobby_travel.png" alt="Travel" class="drawer-hero-img">
+                <div class="drawer-main-content">
+                    <p>Alpine backpacking involves hiking remote wilderness trails, carrying ultralight gear packs, and camping at high-altitude alpine lakes. Exploring mountain ranges provides a deep escape from screen time and absolute immersion in natural landscapes. It is the ultimate way to disconnect from digital structures. Hiking miles of mountain vertical gain teaches physical resilience, navigation, and trail safety while offering unmatched panoramic views.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobby 6 Detail Drawer (Fitness) -->
+    <div class="drawer-overlay" id="drawer-hobby6">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <h2 class="drawer-project-title">Fitness</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-hobby6" aria-label="Close Detail">✕</button>
+            </div>
+            <div class="drawer-body">
+                <img src="assets/hobby_fitness.png" alt="Fitness" class="drawer-hero-img">
+                <div class="drawer-main-content">
+                    <p>Strength and conditioning fitness revolves around calisthenics, functional bodyweight movements, gymnastic ring training, and muscle endurance. Maintaining physical strength ensures high mental energy levels, structural body health, and focus. It establishes a consistent daily discipline. The feedback loop in fitness is completely objective; training regularly builds stamina, improves focus, and keeps my body resilient during long desk cycles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript script link -->
+    <script src="app.js?v=10"></script>
+</body>
+</html>
