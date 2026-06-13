@@ -1192,7 +1192,7 @@ h1, h2, h3, h4, h5, h6 {
 a.cert-card {
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
+    cursor: none;
 }
 
 .cert-card {
