@@ -114,73 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const warpRadius = 130;
         const maxWarp = 16;
         
-        // Paper Airplane state
-        let activeFlights = [];
-        let flightTimer = null;
-        let trailPoints = [];
-        
-        // Bezier utility
-        function getBezierPoint(t, p0, p1, p2, p3) {
-            const cx = 3 * (p1.x - p0.x);
-            const bx = 3 * (p2.x - p1.x) - cx;
-            const ax = p3.x - p0.x - cx - bx;
-            
-            const cy = 3 * (p1.y - p0.y);
-            const by = 3 * (p2.y - p1.y) - cy;
-            const ay = p3.y - p0.y - cy - by;
-            
-            const x = ax * t * t * t + bx * t * t + cx * t + p0.x;
-            const y = ay * t * t * t + by * t * t + cy * t + p0.y;
-            
-            // Derivative for tangent vector
-            const dx = 3 * ax * t * t + 2 * bx * t + cx;
-            const dy = 3 * ay * t * t + 2 * by * t + cy;
-            const angle = Math.atan2(dy, dx);
-            
-            return { x, y, angle };
-        }
-        
-        function startAirplaneFlight(fromLeft = Math.random() > 0.5) {
-            const startY = Math.random() * (height - 200) + 100;
-            const endY = Math.random() * (height - 200) + 100;
-            
-            const p0 = { x: fromLeft ? -50 : width + 50, y: startY };
-            const p3 = { x: fromLeft ? width + 50 : -50, y: endY };
-            
-            // Control points for nice swoops
-            const p1 = {
-                x: fromLeft ? width * 0.25 : width * 0.75,
-                y: Math.random() * (height - 100) + 50
-            };
-            const p2 = {
-                x: fromLeft ? width * 0.75 : width * 0.25,
-                y: Math.random() * (height - 100) + 50
-            };
-            
-            activeFlights.push({
-                p0, p1, p2, p3,
-                startTime: Date.now(),
-                duration: Math.random() * 1000 + 4000 // 4s to 5s duration
-            });
-        }
-        
-        let lastFlyFromLeft = false;
-        
-        function triggerNextFlight() {
-            lastFlyFromLeft = !lastFlyFromLeft;
-            startAirplaneFlight(lastFlyFromLeft);
-        }
-        
-        // Start periodic flights
-        function scheduleNextFlight() {
-            flightTimer = setTimeout(() => {
-                triggerNextFlight();
-                scheduleNextFlight();
-            }, Math.random() * 1000 + 2500); // Between 2.5s and 3.5s (enables overlapping flights)
-        }
-        // Spawn first flight after 3s
-        setTimeout(triggerNextFlight, 3000);
-        scheduleNextFlight();
+
         
         // Render loop
         function drawBackground() {
@@ -227,63 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             
-            // 2. Update and Draw Airplane Trail
-            const now = Date.now();
-            
-            // Clean up old trail points
-            trailPoints = trailPoints.filter(pt => now - pt.time < 1500);
-            
-            // Draw trail dots
-            trailPoints.forEach(pt => {
-                const age = now - pt.time;
-                const ageFactor = 1 - (age / 1500); // 1 at spawn, 0 at decay
-                ctx.beginPath();
-                ctx.arc(pt.x, pt.y, 1.0, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(197, 255, 65, ${ageFactor * 0.25})`;
-                ctx.fill();
-            });
-            
-            // 3. Update and Draw Paper Airplanes
-            activeFlights = activeFlights.filter(flight => {
-                const elapsed = now - flight.startTime;
-                const t = Math.min(elapsed / flight.duration, 1);
-                
-                const pos = getBezierPoint(t, flight.p0, flight.p1, flight.p2, flight.p3);
-                
-                // Add to trail (every frame)
-                trailPoints.push({ x: pos.x, y: pos.y, time: now });
-                
-                // Draw paper airplane
-                ctx.save();
-                ctx.translate(pos.x, pos.y);
-                ctx.rotate(pos.angle);
-                
-                ctx.strokeStyle = 'rgba(197, 255, 65, 0.25)';
-                ctx.lineWidth = 1.5;
-                ctx.lineCap = 'round';
-                ctx.lineJoin = 'round';
-                ctx.shadowColor = 'rgba(197, 255, 65, 0.25)';
-                ctx.shadowBlur = 6;
-                
-                ctx.beginPath();
-                // Nose at (12, 0), left wing tip at (-12, -5), tail join at (-4, 0), right wing tip at (-12, 5)
-                ctx.moveTo(12, 0); 
-                ctx.lineTo(-12, -5); 
-                ctx.lineTo(-4, 0); 
-                ctx.lineTo(-12, 5);
-                ctx.closePath();
-                ctx.stroke();
-                
-                // Fold line
-                ctx.beginPath();
-                ctx.moveTo(12, 0);
-                ctx.lineTo(-4, 0);
-                ctx.stroke();
-                
-                ctx.restore();
-                
-                return t < 1; // Keep flight active if not finished
-            });
+
             
             requestAnimationFrame(drawBackground);
         }
