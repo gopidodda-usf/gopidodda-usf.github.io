@@ -538,10 +538,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-size: clamp(48px, 8vw, 84px);
     font-weight: 900;
-    line-height: 0.95;
+    line-height: 1.1;
     letter-spacing: -0.04em;
     margin-bottom: 24px;
-    gap: 12px;
+    gap: 20px;
 }
 
 .accent-glow-text {
