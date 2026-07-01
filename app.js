@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = e.target;
         if (!target) return;
 
-        const el = target.closest('a, button, input, textarea, select, .glass-interactive, .project-card, .budget-option');
+        const el = target.closest('a, button, input, textarea, select, .glass-interactive, .project-card, .budget-option, .tilt-card');
         
         if (el) {
             cursorRing.classList.add('cursor-hover');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mouseout', (e) => {
         const relatedTarget = e.relatedTarget;
         // Check if the cursor left all interactive bounds entirely
-        if (!relatedTarget || !relatedTarget.closest('a, button, input, textarea, select, .glass-interactive, .project-card, .budget-option')) {
+        if (!relatedTarget || !relatedTarget.closest('a, button, input, textarea, select, .glass-interactive, .project-card, .budget-option, .tilt-card')) {
             cursorRing.classList.remove('cursor-hover', 'cursor-orange', 'cursor-dark');
             cursorDot.classList.remove('cursor-orange', 'cursor-dark');
         }
@@ -388,6 +388,60 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Add a slight delay to compute correct states after centering
             setTimeout(updateArrowStates, 100);
+        });
+    }
+
+
+    /* ==========================================================================
+       4.6 Certifications Carousel Controls
+       ========================================================================== */
+    const certsTrack = document.querySelector('.certs-carousel-track');
+    const certsPrevBtn = document.querySelector('.certs-prev-arrow');
+    const certsNextBtn = document.querySelector('.certs-next-arrow');
+
+    if (certsTrack && certsPrevBtn && certsNextBtn) {
+        const certCard = certsTrack.querySelector('.cert-card');
+
+        const updateCertArrowStates = () => {
+            const scrollLeft = certsTrack.scrollLeft;
+            const maxScroll = certsTrack.scrollWidth - certsTrack.clientWidth;
+
+            // prev button disabled at left end
+            if (scrollLeft <= 5) {
+                certsPrevBtn.classList.add('disabled');
+            } else {
+                certsPrevBtn.classList.remove('disabled');
+            }
+
+            // next button disabled at right end
+            if (scrollLeft >= maxScroll - 5) {
+                certsNextBtn.classList.add('disabled');
+            } else {
+                certsNextBtn.classList.remove('disabled');
+            }
+        };
+
+        certsNextBtn.addEventListener('click', () => {
+            if (certCard) {
+                const cardWidth = certCard.offsetWidth;
+                const gap = parseInt(getComputedStyle(certsTrack).gap) || 24;
+                certsTrack.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+            }
+        });
+
+        certsPrevBtn.addEventListener('click', () => {
+            if (certCard) {
+                const cardWidth = certCard.offsetWidth;
+                const gap = parseInt(getComputedStyle(certsTrack).gap) || 24;
+                certsTrack.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+            }
+        });
+
+        certsTrack.addEventListener('scroll', updateCertArrowStates);
+        
+        // Initial check after load
+        window.addEventListener('load', () => {
+            setTimeout(updateCertArrowStates, 100);
         });
     }
 
@@ -712,6 +766,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnText.innerText = "Send Mail";
             }, 3000);
         }
+    });
+
+    // Timeline Card Toggles for Professional Experience
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    timelineCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Avoid toggling if clicking on links or buttons
+            if (e.target.closest('a, button')) return;
+            
+            card.classList.toggle('is-expanded');
+        });
     });
 
 });
