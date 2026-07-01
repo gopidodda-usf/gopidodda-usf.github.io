@@ -564,7 +564,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-pitch-text {
     color: var(--text-secondary);
-    font-size: clamp(12px, 2.5vw, 18px);
+    font-size: clamp(16px, 2.2vw, 20px);
     line-height: 1.6;
     max-width: 940px;
     margin-bottom: 40px;
@@ -903,6 +903,132 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    Projects Grid Section
    ========================================================================== */
+
+/* ==========================================================================
+   My Story Section
+   ========================================================================== */
+.story-section {
+    padding: 80px 0 60px 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+/* Left Column: TL;DR Terminal Card */
+.story-tldr-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.terminal-body {
+    padding: 24px;
+    font-family: var(--font-body);
+}
+
+.terminal-line {
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.term-prompt {
+    color: var(--accent-lime);
+}
+
+.term-cmd {
+    color: var(--text-primary);
+}
+
+.tldr-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tldr-list li {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+}
+
+.tldr-icon {
+    font-size: 20px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.tldr-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.tldr-text strong {
+    color: var(--text-primary);
+}
+
+/* Right Column: Narrative Story */
+.story-narrative-card {
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.story-para {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.story-para:last-child {
+    margin-bottom: 0;
+}
+
+.story-para strong {
+    color: var(--text-primary);
+}
 
 .projects-section {
     padding: 60px 0 20px 0;
@@ -2274,6 +2400,11 @@ textarea {
     .playground-grid {
         grid-template-columns: 1fr;
     }
+    
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2384,6 +2515,10 @@ textarea {
 
     .sidebar-block {
         flex: 1 1 100%;
+    }
+    
+    .story-narrative-card {
+        padding: 24px;
     }
 }
 
