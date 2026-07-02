@@ -2793,6 +2793,16 @@ textarea {
         font-size: 32px;
     }
     
+    /* Disable Custom Cursor on Mobile/Touch */
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none !important;
+    }
+    
+    html, body, *, *::before, *::after {
+        cursor: auto !important;
+    }
+    
     .education-card {
         flex-direction: column;
         align-items: flex-start;
@@ -2820,6 +2830,23 @@ textarea {
     }
     .degree-title {
         white-space: normal; /* Restore wrapping on mobile */
+    }
+    
+    /* Timeline Mobile Spacing Optimization */
+    .experience-timeline {
+        padding-left: 24px !important;
+    }
+    .experience-timeline::before {
+        left: 4px !important;
+    }
+    .timeline-dot {
+        left: -24px !important;
+        width: 14px !important;
+        height: 14px !important;
+        top: 26px !important;
+    }
+    .timeline-card {
+        padding: 16px 20px !important;
     }
     
     .projects-carousel-track {
@@ -2880,13 +2907,14 @@ textarea {
     .certs-subtitle-wrapper {
         padding: 0 24px;
     }
-
+ 
     .awards-container {
         padding: 0 24px;
     }
     
+    /* Stack Awards on all screens <= 850px */
     .awards-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 16px;
     }
     
@@ -2894,9 +2922,14 @@ textarea {
         grid-template-columns: 1fr;
     }
     
+    /* Stack Contact Grid on all screens <= 850px to prevent layout breaks on tablets */
     .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .contact-pitch {
+        margin-bottom: 24px !important;
     }
     
     .contact-form-block {
@@ -2915,22 +2948,89 @@ textarea {
     .drawer-header {
         padding: 16px 24px;
     }
-
+ 
     .sidebar-block {
         flex: 1 1 100%;
     }
     
-    .story-narrative-card {
-        padding: 24px;
+    /* Narrative & Highlights card optimizations */
+    .story-narrative-card,
+    .story-highlights-card {
+        padding: 24px !important;
     }
 }
 
 @media (max-width: 480px) {
+    /* 2x2 Stats Grid instead of single-column list to save height */
     .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
     }
     
-    .budget-selector-grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* Hero Section Intro Card details */
+    .hero-intro-card {
+        padding: 16px !important;
+    }
+    
+    .contact-pill {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    /* Narrative & Highlights card padding reductions */
+    .story-narrative-card,
+    .story-highlights-card {
+        padding: 16px 20px !important;
+    }
+    
+    /* Carousel mobile swipe optimizations */
+    .projects-carousel-track,
+    .certs-carousel-track {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        gap: 16px !important;
+    }
+    
+    .project-card,
+    .cert-card {
+        flex: 0 0 90% !important;
+    }
+    
+    .carousel-arrow,
+    .certs-prev-arrow,
+    .certs-next-arrow {
+        display: none !important;
+    }
+    
+    .projects-carousel-wrapper::before,
+    .projects-carousel-wrapper::after,
+    .certs-carousel-wrapper::before,
+    .certs-carousel-wrapper::after {
+        display: none !important;
+    }
+    
+    /* Project links stacking on small viewports */
+    .project-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .project-link {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    
+    /* Centered Stacked Footer */
+    .footer-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px;
     }
 }
