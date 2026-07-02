@@ -482,26 +482,14 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-smooth);
 }
 
-.avatar-dashed-circle {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.avatar-dashed-circle-2 {
-    position: absolute;
-    width: 600;
-    height: 600px;
-    pointer-events: none;
-    z-index: 2;
-}
-
+.avatar-dashed-circle,
+.avatar-dashed-circle-2,
 .avatar-dashed-circle-3 {
     position: absolute;
-    width: 600;
-    height: 600px;
+    width: 157.89% !important;
+    height: 150% !important;
+    top: 0 !important;
+    left: 0 !important;
     pointer-events: none;
     z-index: 2;
 }
@@ -2853,6 +2841,17 @@ textarea {
         justify-content: space-between !important;
     }
     
+    /* Position collapsible arrow to top right of header starting at 850px */
+    .timeline-header {
+        position: relative !important;
+    }
+    .timeline-header .toggle-icon {
+        position: absolute !important;
+        top: 4px !important;
+        right: 0 !important;
+        margin: 0 !important;
+    }
+    
     .projects-carousel-track {
         gap: 20px;
         padding: 10px 60px 30px 60px;
@@ -2946,7 +2945,7 @@ textarea {
     }
     
     .drawer-body {
-        padding: 20px 24px;
+        padding: 20px 24px 120px 24px !important;
     }
     
     .drawer-header {
@@ -3398,6 +3397,8 @@ textarea {
         padding: 2.2vw 3.5vw !important;
         border-radius: 2.5vw !important;
     }
+    
+
     
     /* Centered Stacked Footer */
     .footer-content {
