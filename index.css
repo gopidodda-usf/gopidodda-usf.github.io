@@ -223,10 +223,10 @@ h1, h2, h3, h4, h5, h6 {
 .section-badge {
     display: inline-block;
     color: var(--accent-lime);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     margin-bottom: 12px;
 }
 
@@ -860,7 +860,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .degree-title {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
     line-height: 1.3;
@@ -875,7 +875,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .education-location {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-secondary);
     display: inline-flex;
     align-items: center;
@@ -1081,7 +1081,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills-label {
     font-family: var(--font-heading);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1241,7 +1241,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .highlight-label {
     font-family: var(--font-heading);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1249,7 +1249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .highlight-desc {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.45;
     color: var(--text-secondary);
 }
@@ -1470,14 +1470,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-card-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     margin-bottom: 8px;
     line-height: 1.3;
 }
 
 .project-card-excerpt {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.45;
 }
@@ -1648,7 +1648,7 @@ a.cert-card {
 }
 
 .cert-card-issuer {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-secondary);
 }
 
@@ -1726,20 +1726,20 @@ a.cert-card {
 
 .award-title {
     font-family: var(--font-heading);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1.3;
 }
 
 .award-org {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.3;
 }
 
 .award-date {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--accent-lime);
     text-transform: uppercase;
@@ -2837,7 +2837,7 @@ textarea {
         padding-left: 24px !important;
     }
     .experience-timeline::before {
-        left: 4px !important;
+        left: 6px !important;
     }
     .timeline-dot {
         left: -24px !important;
@@ -2847,6 +2847,10 @@ textarea {
     }
     .timeline-card {
         padding: 16px 20px !important;
+    }
+    .timeline-date-wrapper {
+        width: 100% !important;
+        justify-content: space-between !important;
     }
     
     .projects-carousel-track {
@@ -2960,13 +2964,26 @@ textarea {
     }
 }
 
-@media (max-width: 480px) {
-    /* 2x2 Stats Grid instead of single-column list to save height */
+@media (max-width: 600px) {
+    /* 1 column Stats Grid */
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
     }
     
+    /* Optimize container padding to recover width on small screens */
+    .container {
+        padding: 0 16px !important;
+    }
+    
+    /* Gradual hero card transition */
+    .hero-intro-card {
+        padding: 20px !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
     /* Hero Section Intro Card details */
     .hero-intro-card {
         padding: 16px !important;
@@ -3024,6 +3041,362 @@ textarea {
     .project-link {
         flex: 1 1 100%;
         justify-content: center;
+    }
+    
+    /* Centered Stacked Footer */
+    .footer-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    /* Proportional fluid scaling for WebKit/Blink browsers */
+    body {
+        zoom: calc(100vw / 450) !important;
+    }
+    
+    /* Viewport-based proportional fallback styles for non-WebKit browsers (Firefox) */
+    .hero-intro-card {
+        padding: 4vw !important;
+        border-radius: 5vw !important;
+    }
+    .avatar-container {
+        width: 72vw !important;
+        margin-bottom: 4.5vw !important;
+        border-radius: 4.5vw !important;
+    }
+    .intro-title {
+        font-size: 6.2vw !important;
+        margin-bottom: 1.8vw !important;
+    }
+    .contact-pills {
+        gap: 2.2vw !important;
+        margin-bottom: 4vw !important;
+    }
+    .contact-pill {
+        font-size: 2.6vw !important;
+        padding: 1.3vw 2.6vw !important;
+        gap: 1.5vw !important;
+        border-radius: 2vw !important;
+    }
+    .contact-pill svg {
+        width: 3vw !important;
+        height: 3vw !important;
+    }
+    .social-links {
+        gap: 2.5vw !important;
+    }
+    .social-btn {
+        width: 8vw !important;
+        height: 8vw !important;
+        border-radius: 2vw !important;
+    }
+    .social-btn svg {
+        width: 4vw !important;
+        height: 4vw !important;
+    }
+    .download-btn {
+        height: 8vw !important;
+        padding: 0 3.5vw !important;
+        font-size: 2.8vw !important;
+        border-radius: 2vw !important;
+        gap: 1.5vw !important;
+    }
+    .download-btn svg {
+        width: 3.5vw !important;
+        height: 3.5vw !important;
+    }
+    
+    .big-title-container {
+        font-size: 10.5vw !important;
+    }
+    .hero-pitch-lead {
+        font-size: 4.8vw !important;
+        margin-bottom: 4vw !important;
+    }
+    .hero-pitch-text {
+        font-size: 3.8vw !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Stat Cards scaling fallbacks */
+    .stat-item {
+        padding: 5vw !important;
+        border-radius: 4vw !important;
+    }
+    .stat-number {
+        font-size: 8vw !important;
+        margin-bottom: 1vw !important;
+    }
+    .stat-label {
+        font-size: 2.8vw !important;
+    }
+    
+    /* Infinite Marquee scaling fallbacks */
+    .marquee-wrapper {
+        padding: 6vw 0 !important;
+        margin: 10vw 0 10vw 0 !important;
+    }
+    .marquee-content span {
+        font-size: 3.2vw !important;
+    }
+    
+    /* Narrative & Highlights card scaling fallbacks */
+    .story-narrative-card {
+        padding: 5vw !important;
+        border-radius: 4vw !important;
+    }
+    .story-para {
+        font-size: 3.8vw !important;
+        margin-bottom: 5vw !important;
+        line-height: 1.6 !important;
+    }
+    
+    .story-highlights-card {
+        padding: 5vw !important;
+        border-radius: 4vw !important;
+    }
+    .highlights-title {
+        font-size: 5vw !important;
+        margin-bottom: 5vw !important;
+    }
+    .highlights-list {
+        gap: 4vw !important;
+    }
+    .highlights-list li {
+        gap: 3.5vw !important;
+    }
+    .highlight-icon-wrapper {
+        width: 10vw !important;
+        height: 10vw !important;
+        border-radius: 2.5vw !important;
+    }
+    .highlight-svg {
+        width: 4.5vw !important;
+        height: 4.5vw !important;
+    }
+    .highlight-label {
+        font-size: 2.8vw !important;
+    }
+    .highlight-desc {
+        font-size: 3.2vw !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Professional Experience timeline card scaling fallbacks (Headers, description, bullets & skills) */
+    .timeline-card {
+        padding: 4vw 5vw !important;
+        border-radius: 4vw !important;
+    }
+    .job-role {
+        font-size: 4.2vw !important;
+    }
+    .company-name {
+        font-size: 3.2vw !important;
+    }
+    .timeline-date {
+        font-size: 2.8vw !important;
+        padding: 0.8vw 2.5vw !important;
+    }
+    .timeline-desc {
+        font-size: 3.2vw !important;
+        line-height: 1.5 !important;
+    }
+    .timeline-bullets {
+        font-size: 3.2vw !important;
+        padding-left: 4.5vw !important;
+        padding-top: 2vw !important;
+        padding-bottom: 3vw !important;
+    }
+    .timeline-bullets li {
+        margin-bottom: 1.8vw !important;
+    }
+    .skills-label {
+        font-size: 2.8vw !important;
+        margin-right: 1vw !important;
+    }
+    .skill-pill {
+        font-size: 2.8vw !important;
+        padding: 0.8vw 2.4vw !important;
+    }
+    
+    /* Projects tags (non-wrapping) and card fallbacks */
+    .project-card {
+        border-radius: 4vw !important;
+    }
+    .project-thumbnail-wrapper {
+        border-radius: 3vw !important;
+        margin-bottom: 4vw !important;
+    }
+    .project-info {
+        padding: 4vw !important;
+    }
+    .project-card-title {
+        font-size: 3.8vw !important;
+        margin-bottom: 1.8vw !important;
+    }
+    .project-card-excerpt {
+        font-size: 3.2vw !important;
+        line-height: 1.5 !important;
+    }
+    .project-tags {
+        flex-wrap: nowrap !important;
+        gap: 1.5vw !important;
+        margin-bottom: 5vw !important;
+    }
+    .project-tag {
+        font-size: 2.2vw !important;
+        padding: 0.5vw 1.8vw !important;
+        white-space: nowrap !important;
+    }
+    
+    /* Certifications card fallbacks */
+    .cert-card {
+        border-radius: 4vw !important;
+        padding: 6vw 5vw !important;
+        gap: 4vw !important;
+    }
+    .cert-logo-container {
+        width: 32vw !important;
+        height: 32vw !important;
+    }
+    .cert-card-title {
+        font-size: 3.8vw !important;
+    }
+    .cert-card-issuer {
+        font-size: 3.2vw !important;
+    }
+    
+    /* Awards & Honors card scaling fallbacks */
+    .award-card {
+        padding: 4vw 5vw !important;
+        border-radius: 4vw !important;
+        gap: 3.5vw !important;
+    }
+    .award-badge {
+        font-size: 7.5vw !important;
+    }
+    .award-content {
+        gap: 0.8vw !important;
+    }
+    .award-title {
+        font-size: 3.8vw !important;
+    }
+    .award-org {
+        font-size: 3.2vw !important;
+    }
+    .award-date {
+        font-size: 2.8vw !important;
+        margin-top: 0.5vw !important;
+    }
+    
+    /* Education card scaling fallbacks */
+    .education-card {
+        padding: 4vw 5vw !important;
+        border-radius: 4vw !important;
+        gap: 5vw !important;
+    }
+    .college-logo-container {
+        width: 32vw !important;
+        height: 32vw !important;
+        border-radius: 2.5vw !important;
+    }
+    .education-content {
+        gap: 2.5vw !important;
+    }
+    .edu-row {
+        gap: 3.5vw !important;
+    }
+    .college-name {
+        font-size: 5vw !important;
+    }
+    .edu-degree-group {
+        gap: 1.8vw !important;
+    }
+    .degree-title {
+        font-size: 3.2vw !important;
+    }
+    .education-gpa {
+        font-size: 3.2vw !important;
+    }
+    .education-location {
+        font-size: 2.8vw !important;
+        gap: 1.2vw !important;
+    }
+    .education-location svg {
+        width: 3vw !important;
+        height: 3vw !important;
+    }
+    .education-date {
+        font-size: 2.8vw !important;
+        padding: 0.8vw 2.5vw !important;
+        border-radius: 20vw !important;
+    }
+    
+    /* Hobbies & interests card scaling fallbacks */
+    .hobby-card {
+        padding: 4vw 5vw !important;
+        border-radius: 4vw !important;
+        gap: 4vw !important;
+        min-height: auto !important;
+    }
+    .hobby-icon-wrap {
+        width: 10vw !important;
+        height: 10vw !important;
+        border-radius: 2.2vw !important;
+    }
+    .hobby-icon-wrap svg {
+        width: 5vw !important;
+        height: 5vw !important;
+    }
+    .hobby-title {
+        font-size: 5vw !important;
+    }
+    
+    /* General section titles and form scaling fallbacks */
+    .section-title {
+        font-size: 7.5vw !important;
+    }
+    
+    .section-badge {
+        font-size: 2.5vw !important;
+        padding: 0.8vw 2vw !important;
+    }
+    
+    .detail-value {
+        font-size: 3.6vw !important;
+    }
+    
+    .form-group label {
+        font-size: 2.8vw !important;
+    }
+    
+    .form-group input, .form-group textarea {
+        font-size: 3vw !important;
+        padding: 2.5vw 3.5vw !important;
+    }
+    
+    /* Additional scaled items */
+    .contact-pitch {
+        font-size: 3.8vw !important;
+        line-height: 1.5 !important;
+        margin-bottom: 6vw !important;
+    }
+    .education-desc {
+        font-size: 3.2vw !important;
+        line-height: 1.5 !important;
+        margin-top: 1vw !important;
+    }
+    .credentials-subtitle {
+        font-size: 5vw !important;
+    }
+    .mobile-nav-item {
+        font-size: 3.2vw !important;
+        padding: 2.2vw 3.5vw !important;
+        border-radius: 2.5vw !important;
     }
     
     /* Centered Stacked Footer */
