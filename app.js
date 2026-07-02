@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const revealElements = document.querySelectorAll('.section-reveal');
     const pageSections = document.querySelectorAll('.page-section');
-    const navLinks = document.querySelectorAll('.nav-item, .nav-logo');
+    const navLinks = document.querySelectorAll('.nav-item, .nav-logo, .mobile-nav-item');
 
     // Reveal elements on scroll
     const revealObserver = new IntersectionObserver((entries) => {
@@ -238,6 +238,33 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.add('nav-scrolled');
         } else {
             navbar.classList.remove('nav-scrolled');
+        }
+    });
+
+    // Mobile Hamburger Menu Toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-item');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navbar.classList.toggle('mobile-menu-active');
+        });
+    }
+
+    // Close menu on link click
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('mobile-menu-active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navbar.classList.contains('mobile-menu-active')) {
+            if (!e.target.closest('.navbar')) {
+                navbar.classList.remove('mobile-menu-active');
+            }
         }
     });
 
