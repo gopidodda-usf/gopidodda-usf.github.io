@@ -474,255 +474,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ==========================================================================
-       5. Vibecoding Spaces - Canvas Particle Mesh
+       5. Skills & Capabilities Section - Search & Category Filters
        ========================================================================== */
-    const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
-    const viewport = document.getElementById('particle-viewport');
-    const resetBtn = document.getElementById('btn-reset-particles');
-    const countSlider = document.getElementById('particle-count-slider');
-
-    let particles = [];
-    let particleCount = parseInt(countSlider.value);
-    let viewWidth = canvas.width = viewport.clientWidth;
-    let viewHeight = canvas.height = viewport.clientHeight;
+    const skillsSearchInput = document.getElementById('skills-search-input');
+    const skillCards = document.querySelectorAll('.skills-category-card');
     
-    let pointer = { x: null, y: null, active: false };
-
-    // Resize canvas dynamically
-    window.addEventListener('resize', () => {
-        if (viewport) {
-            viewWidth = canvas.width = viewport.clientWidth;
-            viewHeight = canvas.height = viewport.clientHeight;
-            initializeParticles();
-        }
-    });
-
-    viewport.addEventListener('mousemove', (e) => {
-        const rect = viewport.getBoundingClientRect();
-        pointer.x = e.clientX - rect.left;
-        pointer.y = e.clientY - rect.top;
-        pointer.active = true;
-    });
-
-    viewport.addEventListener('mouseleave', () => {
-        pointer.active = false;
-    });
-
-    class Particle {
-        constructor() {
-            this.reset();
-        }
-        reset() {
-            this.x = Math.random() * viewWidth;
-            this.y = Math.random() * viewHeight;
-            this.vx = (Math.random() - 0.5) * 0.8;
-            this.vy = (Math.random() - 0.5) * 0.8;
-            this.radius = Math.random() * 2 + 1;
-            this.color = Math.random() > 0.8 ? '#c5ff41' : '#ffffff';
-        }
-        update() {
-            // Apply slight gravity draw to cursor
-            if (pointer.active) {
-                const dx = pointer.x - this.x;
-                const dy = pointer.y - this.y;
-                const dist = Math.sqrt(dx*dx + dy*dy);
-                if (dist < 120) {
-                    const force = (120 - dist) / 120;
-                    this.vx += (dx / dist) * force * 0.05;
-                    this.vy += (dy / dist) * force * 0.05;
+    // Fuzzy search filter
+    if (skillsSearchInput) {
+        skillsSearchInput.addEventListener('input', () => {
+            const query = skillsSearchInput.value.toLowerCase().trim();
+            
+            skillCards.forEach(card => {
+                const tags = card.querySelectorAll('.skill-tag');
+                let hasMatch = false;
+                
+                tags.forEach(tag => {
+                    const skillName = tag.innerText.toLowerCase();
+                    if (query.length === 0) {
+                        tag.classList.remove('highlight-match', 'dimmed-match');
+                        hasMatch = true;
+                    } else if (skillName.includes(query)) {
+                        tag.classList.add('highlight-match');
+                        tag.classList.remove('dimmed-match');
+                        hasMatch = true;
+                    } else {
+                        tag.classList.remove('highlight-match');
+                        tag.classList.add('dimmed-match');
+                    }
+                });
+                
+                if (hasMatch) {
+                    card.classList.remove('dimmed');
+                } else {
+                    card.classList.add('dimmed');
                 }
-            }
-
-            this.x += this.vx;
-            this.y += this.vy;
-
-            // Damp speed limit
-            this.vx *= 0.98;
-            this.vy *= 0.98;
-
-            // Boundaries bounce
-            if (this.x < 0 || this.x > viewWidth) this.vx *= -1;
-            if (this.y < 0 || this.y > viewHeight) this.vy *= -1;
-        }
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.shadowBlur = this.color === '#c5ff41' ? 4 : 0;
-            ctx.shadowColor = '#c5ff41';
-            ctx.fill();
-            ctx.shadowBlur = 0; // reset
-        }
-    }
-
-    function initializeParticles() {
-        particles = [];
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
-    }
-
-    function animateParticles() {
-        ctx.clearRect(0, 0, viewWidth, viewHeight);
-
-        // Draw connections
-        for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
-            particles[i].draw();
-
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const dist = Math.sqrt(dx*dx + dy*dy);
-
-                if (dist < 80) {
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    // Fade lines out based on distance
-                    const alpha = (80 - dist) / 80 * 0.15;
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-                    ctx.lineWidth = 0.5;
-                    ctx.stroke();
-                }
-            }
-        }
-        requestAnimationFrame(animateParticles);
-    }
-
-    initializeParticles();
-    animateParticles();
-
-    resetBtn.addEventListener('click', initializeParticles);
-    countSlider.addEventListener('input', () => {
-        particleCount = parseInt(countSlider.value);
-        initializeParticles();
-    });
-
-
-    /* ==========================================================================
-       6. Vibecoding Spaces - Retro Cyber Game
-       ========================================================================== */
-    const gameIntro = document.getElementById('game-intro-screen');
-    const gamePlay = document.getElementById('game-play-screen');
-    const gameOver = document.getElementById('game-over-screen');
-    const startBtn = document.getElementById('btn-start-game');
-    const restartBtn = document.getElementById('btn-restart-game');
-    
-    const scoreVal = document.getElementById('game-score');
-    const timerVal = document.getElementById('game-timer');
-    const targetChar = document.getElementById('target-char');
-    const finalScore = document.getElementById('final-score');
-    const keyGrid = document.getElementById('cyber-keyboard-grid');
-    const gameResultTitle = document.getElementById('game-result-title');
-
-    let gameActive = false;
-    let score = 0;
-    let timeLeft = 10.0;
-    let targetBypassKey = '';
-    let gameTimerInterval;
-
-    const cyberHexKeys = ['A3', 'C7', 'F0', 'E8', 'BD', '4A', 'D2', '9E', '6B', '1C', '5F', '0B'];
-
-    function startCyberBypass() {
-        gameActive = true;
-        score = 0;
-        timeLeft = 10.0;
-        
-        gameIntro.classList.add('hidden');
-        gameOver.classList.add('hidden');
-        gamePlay.classList.remove('hidden');
-
-        scoreVal.innerText = score;
-        timerVal.innerText = timeLeft.toFixed(1) + 's';
-
-        generateKeypad();
-        chooseNextTarget();
-
-        // Game Loop Timer
-        clearInterval(gameTimerInterval);
-        gameTimerInterval = setInterval(() => {
-            timeLeft -= 0.1;
-            if (timeLeft <= 0) {
-                timeLeft = 0;
-                endCyberBypass(false); // Fail
-            }
-            timerVal.innerText = timeLeft.toFixed(1) + 's';
-            // Warning color
-            if (timeLeft < 3.0) {
-                timerVal.className = 'orange-text';
-            } else {
-                timerVal.className = 'accent-text';
-            }
-        }, 100);
-    }
-
-    function generateKeypad() {
-        keyGrid.innerHTML = '';
-        cyberHexKeys.forEach(k => {
-            const btn = document.createElement('button');
-            btn.className = 'key-btn glass-interactive';
-            btn.innerText = k;
-            btn.type = 'button';
-            btn.addEventListener('click', () => {
-                handleKeyInput(k);
             });
-            keyGrid.appendChild(btn);
         });
     }
-
-    function chooseNextTarget() {
-        // Random pick
-        const randKey = cyberHexKeys[Math.floor(Math.random() * cyberHexKeys.length)];
-        targetBypassKey = randKey;
-        targetChar.innerText = targetBypassKey;
-
-        // Visual blinking cue on grid
-        const buttons = keyGrid.querySelectorAll('.key-btn');
-        buttons.forEach(btn => {
-            btn.classList.remove('target-blink');
-            if (btn.innerText === targetBypassKey) {
-                // Stagger blinking slightly
-                setTimeout(() => {
-                    if (gameActive) btn.classList.add('target-blink');
-                }, 100);
-            }
-        });
-    }
-
-    function handleKeyInput(key) {
-        if (!gameActive) return;
-        if (key === targetBypassKey) {
-            score++;
-            scoreVal.innerText = score;
-            timeLeft += 1.5; // Award time bonus
-            if (timeLeft > 15.0) timeLeft = 15.0; // cap time
-            chooseNextTarget();
-        } else {
-            timeLeft -= 1.0; // Deduct time for penalty
-            if (timeLeft < 0) timeLeft = 0;
-        }
-    }
-
-    function endCyberBypass(victory = false) {
-        gameActive = false;
-        clearInterval(gameTimerInterval);
-        gamePlay.classList.add('hidden');
-        gameOver.classList.remove('hidden');
-
-        finalScore.innerText = score;
-        if (score >= 15) {
-            gameResultTitle.innerText = "WALL BYPASSED";
-            gameResultTitle.className = "game-result-title accent-text";
-        } else {
-            gameResultTitle.innerText = "SYSTEM LOCKDOWN";
-            gameResultTitle.className = "game-result-title orange-text";
-        }
-    }
-
-    startBtn.addEventListener('click', startCyberBypass);
-    restartBtn.addEventListener('click', startCyberBypass);
 
 
     /* ==========================================================================
