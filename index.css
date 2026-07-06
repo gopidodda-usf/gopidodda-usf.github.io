@@ -994,7 +994,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     gap: 16px;
     flex-wrap: wrap;
 }
@@ -1072,8 +1072,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
     margin: 0;
     padding-left: 20px;
-    padding-top: 12px;
-    padding-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     list-style-type: disc;
 }
 
@@ -1086,7 +1086,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-skills {
-    margin-top: 0px;
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
