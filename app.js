@@ -403,11 +403,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         track.addEventListener('scroll', updateArrowStates);
 
-        // Center on Load (Projects 3, 4, 5 visible; 1, 2 peeking/hidden to left; 6, 7 to right)
+        // Center on Load (CareSync AI centered by default)
         window.addEventListener('load', () => {
             const cards = track.querySelectorAll('.project-card');
-            if (cards[3]) {
-                const targetCard = cards[3];
+            if (cards[4]) {
+                const targetCard = cards[4];
                 const cardLeft = targetCard.offsetLeft;
                 const cardWidth = targetCard.offsetWidth;
                 const trackWidth = track.clientWidth;
