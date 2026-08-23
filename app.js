@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================================================
        4. Case Study Drawers
        ========================================================================== */
-    const projectCards = document.querySelectorAll('.project-card, .hobby-card');
+    const projectCards = document.querySelectorAll('.project-card, .hobby-card, [data-drawer]');
     const closeButtons = document.querySelectorAll('[data-close]');
     const drawerOverlays = document.querySelectorAll('.drawer-overlay');
 
@@ -337,11 +337,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Close drawer on clicking overlay backdrop
     drawerOverlays.forEach(drawer => {
         drawer.addEventListener('click', (e) => {
             if (e.target === drawer) {
                 closeAllDrawers();
             }
+        });
+    });
+
+    // Copy URL Buttons in Drawers
+    const copyButtons = document.querySelectorAll('.btn-copy-url');
+    copyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const targetId = btn.getAttribute('data-copy-target');
+            const targetEl = document.getElementById(targetId);
+            if (!targetEl) return;
+            const textToCopy = targetEl.textContent.trim();
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const textSpan = btn.querySelector('span');
+                const origText = textSpan ? textSpan.textContent : 'Copy';
+                btn.classList.add('copied');
+                if (textSpan) textSpan.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    if (textSpan) textSpan.textContent = origText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
         });
     });
 

@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css?v=121">
+    <link rel="stylesheet" href="index.css?v=123">
 </head>
 <body>
 
@@ -73,7 +73,7 @@
             <div class="container section-reveal hero-grid">
                 <!-- Avatar & Intro info -->
                 <div class="hero-intro-card glass">
-                    <div class="avatar-container tilt-card">
+                    <div class="avatar-container tilt-card" data-drawer="drawer-avatar">
                         <svg class="avatar-dashed-circle" viewBox="0 0 600 600">
                             <circle cx="0" cy="-210" r="298" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="3" stroke-dasharray="12 12" />
                         </svg>
@@ -1777,7 +1777,58 @@
         </div>
     </div>
 
+    <!-- Hero Avatar Detail Drawer -->
+    <div class="drawer-overlay" id="drawer-avatar">
+        <div class="drawer-container glass">
+            <div class="drawer-header">
+                <div class="drawer-project-meta">
+                    <h2 class="drawer-project-title">Gopi Dodda</h2>
+                </div>
+                <button class="btn-close glass-interactive" data-close="drawer-avatar" aria-label="Close Profile Links">✕</button>
+            </div>
+            <div class="drawer-body">
+                <div class="url-copy-section">
+                    <!-- Website URL Block -->
+                    <div class="url-copy-block">
+                        <label class="url-copy-label">Website</label>
+                        <div class="url-copy-box">
+                            <span class="url-text" id="url-website">https://gopidodda.com/</span>
+                            <button type="button" class="btn-copy-url glass-interactive" data-copy-target="url-website" aria-label="Copy Website URL">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn URL Block -->
+                    <div class="url-copy-block">
+                        <label class="url-copy-label">LinkedIn</label>
+                        <div class="url-copy-box">
+                            <span class="url-text" id="url-linkedin">https://www.linkedin.com/in/gopidodda96/</span>
+                            <button type="button" class="btn-copy-url glass-interactive" data-copy-target="url-linkedin" aria-label="Copy LinkedIn URL">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- GitHub URL Block -->
+                    <div class="url-copy-block">
+                        <label class="url-copy-label">GitHub</label>
+                        <div class="url-copy-box">
+                            <span class="url-text" id="url-github">https://github.com/gopidodda-usf</span>
+                            <button type="button" class="btn-copy-url glass-interactive" data-copy-target="url-github" aria-label="Copy GitHub URL">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript script link -->
-    <script src="app.js?v=17"></script>
+    <script src="app.js?v=18"></script>
 </body>
 </html>
